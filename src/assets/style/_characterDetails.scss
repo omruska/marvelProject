@@ -1,0 +1,131 @@
+.characters-details {
+  width: 100%;
+  height: auto;
+  padding-bottom: 30px;
+  background-image: url("../img/bg_characters.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .characters-details-header {
+    width: 100%;
+    height: auto;
+    background-color: #202020;
+    clip-path: polygon(0 0, 0 99%, 100% 95%, 100% 0);
+    transition: clip-path 0.25s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    @media (max-width: 768px) {
+      max-width: 768px;
+      gap:10px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      flex-wrap: wrap;
+    }
+    .name {
+      padding: 10px;
+      h3 {
+        color: #ffff;
+        position: relative;
+        font: 400 60px/1 RobotoCondensed Bold;
+        @media (max-width: 768px) {
+          font: 400 40px/1 RobotoCondensed Bold;
+          margin-top: 50px;
+        }
+        &:after,
+        &:before {
+          background-color: #c6a972;
+          content: "";
+          display: block;
+          height: 2px;
+          position: absolute;
+          transform: rotate(-45deg) skewX(45deg);
+          width: 30px;
+        }
+        &:after {
+          left: -6px;
+          top: calc(100% + 2px);
+          transform-origin: right top;
+        }
+        &:before {
+          left: 70px;
+          top: -8px;
+          transform-origin: left bottom;
+        }
+      }
+      p {
+        font-size: 30px;
+        color: #ffffff;
+        font-weight: bold;
+        font-family: "Marvel";
+        margin-top: 50px;
+        max-width: 500px;
+        @media (max-width: 768px) {
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+  .characters-main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .series {
+      background-color: #151515;
+      padding: 20px;
+      border-radius: 20px;
+      margin-top: 40px;
+      h4 {
+        font-size: 50px;
+        color: #ffffff;
+        font-weight: bold;
+        font-family: "Marvel";
+        margin-bottom: 30px;
+        margin-left: 30px;
+        box-shadow: 0 0 40px rgba(222, 13, 13, 0.8);
+        border-radius: 40px;
+        text-align: center;
+        padding: 10px;
+      }
+      p {
+        font-size: 24px;
+        color: #ffffff;
+        font-weight: bold;
+        font-family: "Marvel";
+        margin-bottom: 20px;
+        margin-left: 30px;
+      }
+    }
+    .character-comics {
+      display: flex;
+      flex-direction: column;
+      background-color: #151515;
+      padding: 20px;
+      border-radius: 20px;
+      margin-top: 40px;
+      h4 {
+        font-size: 50px;
+        color: #ffffff;
+        font-weight: bold;
+        font-family: "Marvel";
+        margin-bottom: 30px;
+        margin-left: 30px;
+        box-shadow: 0 0 40px rgba(222, 13, 13, 0.8);
+        border-radius: 40px;
+        text-align: center;
+        padding: 10px;
+      }
+      p {
+        font-size: 24px;
+        color: #ffffff;
+        font-weight: bold;
+        font-family: "Marvel";
+        margin-bottom: 20px;
+        margin-left: 30px;
+      }
+    }
+  }
+}

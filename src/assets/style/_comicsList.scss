@@ -1,0 +1,90 @@
+.comics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  gap:60px;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  .card {
+    width: 100%;
+    max-width: 400px;
+    min-height: 210px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: translateY(-20px);
+      .name {
+        h3 {
+          color: #ef3636;
+        }
+      }
+    }
+    img {
+      object-fit: cover;
+      width: 100%;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+    }
+    .name {
+      max-width: 400px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      gap: 20px;
+      color: #151515;
+      position: relative;
+      padding-top: 30px;
+      padding-left: 10px;
+      transition: transform 0.3s ease;
+      &:after {
+        border-color: transparent #fff transparent transparent;
+        border-style: solid;
+        border-width: 12px 12px 0 0;
+        bottom: 0;
+        content: "";
+        position: absolute;
+        right: 0;
+        top: auto;
+        z-index: 40;
+      }
+      h3 {
+        color: #151515;
+        font: 700 25px/1.1 RobotoCondensed Bold,Trebuchet MS,Helvetica,Arial,sans-serif;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        height: 150px;
+      }
+      button {
+        width: 200px;
+        height: 70px;
+        background-color: #ef3636;
+        color: #e3c6c6;
+        margin: auto;
+        border:none;
+        font-size: 20px;
+        font-family: RobotoCondensed Bold,Trebuchet MS,Helvetica,Arial,sans-serif;
+        font-weight: bold;
+        position: relative;
+        cursor: pointer;
+        &:after {
+          border-color: transparent #fff transparent transparent;
+          border-style: solid;
+          border-width: 12px 12px 0 0;
+          bottom: 0;
+          content: "";
+          position: absolute;
+          right: 0;
+          top: auto;
+          z-index: 40;
+        }
+        &:hover {
+          background-color:#e3c6c6;
+          color: #ef3636;
+        }
+      }
+    }
+  }
+}
